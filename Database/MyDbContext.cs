@@ -21,11 +21,36 @@ namespace ConsoleTP1.Database
             {
                 for (int i = 0; i < 10; i++)
                 {
-                    this.Books.Add(new Entities.Book() { Name = "F" + i, Nb_page = 100 * i });
+                    this.Books.Add(new Entities.Book() { Name = "Book" + i, Nb_page = 100 * i });
                 }
 
                 this.SaveChanges();
-      
+
+                this.Authors.Add(new Entities.Author() { Firstname = "AJulio", Lastname = "AMartinez" });
+                this.Authors.Add(new Entities.Author() { Firstname = "ABobby", Lastname = "AMcCain" });
+
+                this.SaveChanges();
+
+                this.Customers.Add(new Entities.Customer() { Firstname = "CFreddy", Lastname = "CMercury" });
+                this.Customers.Add(new Entities.Customer() { Firstname = "CBon", Lastname = "CJovy" });
+
+                this.SaveChanges();
+
+                this.BookShops.Add(new Entities.BookShop() { Name = "BLibrary" });
+                this.BookShops.Add(new Entities.BookShop() { Name = "BBookyshop" });
+
+                this.SaveChanges();
+
+                this.Editors.Add(new Entities.Editor() { Name = "EPublishor"});
+
+                this.SaveChanges();
+
+
+
+
+
+
+
             }
 
 
